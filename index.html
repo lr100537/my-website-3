@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Henry Stickmin Fan Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      background-color: #1f2833;
+      color: #e5e5e5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #66fcf1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-size: 3rem;
+      font-weight: 900;
+      text-align: center;
+      color: #45a29e;
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+      margin-bottom: 1rem;
+    }
+
+    .title::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #66fcf1, transparent);
+      bottom: 0;
+      left: -100%;
+      animation: slide 2.5s linear infinite;
+    }
+
+    @keyframes slide {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      color: #66fcf1;
+      border-bottom: 2px solid #45a29e;
+      padding-bottom: 0.3rem;
+    }
+
+    p.short-desc {
+      font-style: italic;
+      max-width: 600px;
+      margin: 0.5rem auto 1rem auto;
+      text-align: center;
+    }
+
+    ul.mission-list,
+    ul.benefits-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    ul li {
+      background: #2c2f34;
+      padding: 1rem;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    ul li:hover {
+      background: #3b3f45;
+    }
+
+    ul strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .side-by-side {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    /* Button 85 */
+    .button-85 {
+      padding: 0.6em 2em;
+      border: none;
+      outline: none;
+      color: rgb(255, 255, 255);
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .button-85:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing-button-85 20s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    @keyframes glowing-button-85 {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .button-85:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #222;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      background-color: #45a29e;
+      color: #e0ffff;
+      padding: 1rem 0;
+      border-radius: 6px;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 0.4rem;
+      color: #b2f7f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Henry Stickmin Fan Site</h1>
+
+    <section>
+      <h2>What is Henry Stickmin?</h2>
+      <p class="short-desc">A hilarious choose-your-own-adventure game series full of chaotic fails, secret endings, and crazy humor.</p>
+    </section>
+
+    <section>
+      <h2>When was it made?</h2>
+      <p class="short-desc">The Henry Stickmin Collection was released in 2020 as a remastered version of the series.</p>
+    </section>
+
+    <section>
+      <h2>Missions</h2>
+      <ul class="mission-list">
+        <li>
+          <strong>Breaking the Bank</strong>
+          Henry tries to steal from a secure bank with funny outcomes depending on your choice.
+        </li>
+        <li>
+          <strong>Escaping the Prison</strong>
+          Henry must escape a guarded prison using different gadgets and wild logic.
+        </li>
+        <li>
+          <strong>Stealing the Diamond</strong>
+          Help Henry sneak or charge in to grab a priceless diamond—your path shapes the result.
+        </li>
+        <li>
+          <strong>Infiltrating the Airship</strong>
+          Work with the government or go solo to board a criminal airship filled with traps.
+        </li>
+        <li>
+          <strong>Fleeing the Complex</strong>
+          Stuck in a snowy fortress, choose allies and plans to break free or fail hilariously.
+        </li>
+        <li>
+          <strong>Completing the Mission</strong>
+          All paths collide—every decision changes the ending. It’s big, epic, and full of chaos.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Benefits of Playing</h2>
+      <ul class="benefits-list">
+        <li><strong>Endless Fun:</strong> Multiple endings keep gameplay fresh and exciting.</li>
+        <li><strong>Humor Galore:</strong> Loads of funny fails and Easter eggs to discover.</li>
+        <li><strong>Replay Value:</strong> Different choices lead to new surprises each time.</li>
+        <li><strong>Creative Storytelling:</strong> Interactive narrative that puts you in control.</li>
+      </ul>
+    </section>
+
+    <section class="side-by-side">
+      <div>
+        <h2>Reviews</h2>
+        <p>Check out what fans are saying on IMDb:</p>
+        <a href="https://www.imdb.com/title/tt12881452/reviews/" target="_blank" rel="noopener noreferrer">
+          <button class="button-85" role="button">IMDb Reviews</button>
+        </a>
+      </div>
+
+      <div>
+        <h2>Actual Website</h2>
+        <p>Visit the official Henry Stickmin website for more info and game downloads.</p>
+        <a href="https://www.henrystickmin.com" target="_blank" rel="noopener noreferrer">
+          <button class="button-85" role="button">Official Site</button>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>About Me</h2>
+      <p>Check out my personal website to learn more about me and my projects.</p>
+      <a href="https://lr100537.github.io/my-website-2/" target="_blank" rel="noopener noreferrer">
+        <button class="button-85" role="button">About Me</button>
+      </a>
+    </section>
+
+    <footer>
+         &copy; 2025 Henry Stickmin Fan Website <br />
+    </footer>
+  </div>
+</body>
+</html>

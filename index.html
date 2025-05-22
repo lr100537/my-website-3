@@ -190,6 +190,15 @@
       margin-top: 0.4rem;
       color: #b2f7f9;
     }
+
+    /* Back to Top Button positioning */
+    #topBtn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      display: none;
+      z-index: 9999;
+    }
   </style>
 </head>
 <body>
@@ -276,21 +285,21 @@
          &copy; 2025 Henry Stickmin Fan Website <br />
     </footer>
   </div>
+
   <!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="topBtn" title="Go to top">↑ Top</button>
+  <button onclick="scrollToTop()" id="topBtn" class="button-85" title="Back to Top">Back to Top</button>
 
-<script>
-  const topButton = document.getElementById("topBtn");
+  <script>
+    const topButton = document.getElementById("topBtn");
 
-  // Show button when user scrolls down
-  window.onscroll = () => {
-    topButton.style.display = window.scrollY > 300 ? "block" : "none";
-  };
+    // Show button when user scrolls down
+    window.onscroll = () => {
+      topButton.style.display = window.scrollY > 300 ? "inline-block" : "none";
+    };
 
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
-
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
